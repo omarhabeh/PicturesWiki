@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://ec2-54-228-243-238.eu-west-1.compute.amazonaws.com/d6isc5ael7rcm0</property>
+        <property name="connection.username">semmwhovkvhjwd</property>
+        <property name="connection.password">fb127565b83b7cf3b4deb28fbf8e53e5cac476ec8a5016787b5ccc3b4541dc3a</property>
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Set the current session context -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <!-- dbcp connection pool configuration -->
+	<mapping class="hibernate.User"/>
+	<mapping class="hibernate.Pics"/>
+    </session-factory>
+</hibernate-configuration>
